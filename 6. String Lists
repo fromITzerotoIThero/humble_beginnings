@@ -1,0 +1,10 @@
+word = input("Give me a word, I'll check whether it's a palindrome: ")
+
+word = word.lower().replace(" ", "")
+reversed_word = word[::-1]
+print (reversed_word)
+
+if reversed_word == word:
+  print ("Yay, your word,", word + ", is a palindrome.")
+else:
+  print ("Nope, your word,", word + ", is not a palindrome.")
