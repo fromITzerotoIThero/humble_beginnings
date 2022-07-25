@@ -17,3 +17,21 @@ a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 
 print ([num for num in a if num in b])
+
+
+# ok, I know how to remove the duplicates, a rather primitive way, but works XP
+
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+c = []
+d = []
+
+for num in a:
+  if num in b:
+    c.append(num)
+
+for num in c:
+  if num not in d:
+    d.append(num)
+
+print(d)
