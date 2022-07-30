@@ -1,0 +1,35 @@
+"""
+https://www.practicepython.org/exercise/2014/03/26/08-rock-paper-scissors.html
+Well, I haven't figured out yet how to use the 'while' loop in this exercise, but it works :)
+"""
+
+name1 = input("Player1, give me your name: ")
+name2 = input("Player2, give me your name: ")
+
+def play():
+  ch1 = input(name1 + ", choose paper/rock/scissors: ")
+  ch2 = input(name2 + ", choose paper/rock/scissors: ")
+  if ch1 == ch2:
+    print ("Tie! Make your choices again!")
+    play()
+  elif ch1 == "paper" and ch2 == "rock":
+    print ("Congrats " + name1 + "! Paper beats rock!")
+  elif ch1 == "paper" and ch2 == "scissors":
+    print ("Congrats " + name2 + "! cissors beat paper!")
+  elif ch1 == "rock" and ch2 == "paper":
+    print ("Congrats " + name2 + "! Paper beats rock!")
+  elif ch1 == "rock" and ch2 == "scissors":
+    print ("Congrats " + name1 + "! Rock beats scissors!")
+  elif ch1 == "scissors" and ch2 == "paper":
+    print ("Congrats " + name1 + "! Scissors beat paper!")
+  elif ch1 == "scissors" and ch2 == "rock":
+    print ("Congrats " + name2 + "! Rock beats scissors!")
+
+  another_round = input("Wanna have another round? Say yes/no: ")
+  if another_round == "yes":
+    play()
+  elif another_round == "no":
+    print ("Thanks for playing!")
+
+play()
+
