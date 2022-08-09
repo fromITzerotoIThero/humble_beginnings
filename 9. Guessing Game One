@@ -1,0 +1,25 @@
+"""
+https://www.practicepython.org/exercise/2014/04/02/09-guessing-game-one.html
+Well, I don't know how to make the game count the number of guesses yet and I still 
+have to write the option for an exit, but the guessing process works fine ;)
+"""
+
+
+import random
+
+a = random.randint(1, 10)
+
+print("Hi!\nThe computer's generated a random number from the range 1 - 10.\nYour task is to guess it. Ready?\n")
+
+def play():
+  user_input = int(input("Give me a number from 1 - 10: "))
+  if user_input == a:
+    print("Yay! You made a right guess!")
+  elif user_input < a:
+    print("Too low! Make another guess!")
+    play()
+  elif user_input > a:
+    print("Too high! Make another guess!")
+    play()
+
+play()
