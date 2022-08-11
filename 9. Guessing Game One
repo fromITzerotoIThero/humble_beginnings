@@ -7,9 +7,9 @@ have to write the option for an exit, but the guessing process works fine ;)
 
 import random
 
-a = random.randint(1, 10)
+a = random.randint(1, 9)
 
-print("Hi!\nThe computer's generated a random number from the range 1 - 10.\nYour task is to guess it. Ready?\n")
+print("Hi!\nThe computer's generated a random number from the range 1 - 9.\nYour task is to guess it. Ready?\n")
 
 def play():
   user_input = int(input("Give me a number from 1 - 10: "))
